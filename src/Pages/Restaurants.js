@@ -5,6 +5,8 @@ import { Card, Button, Row} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
+
+
 export default class Restaurants extends React.Component {
     
     state = {
@@ -24,12 +26,12 @@ export default class Restaurants extends React.Component {
         return this.state.restaurants.map(restaurant => 
             <Card key={restaurant._id} shadow={4} style={{ width: '300px',margin: "auto" }}>
             <Card.Title style={{height: '250px', background: restaurant.name }}>{restaurant.name}</Card.Title>
-            <Card.Text>
+            <Card.Text >
                 {restaurant.address}
                 {restaurant.phonenumber}
             </Card.Text>
             <Link to={`/restaurant/${restaurant._id}`}>
-            <Button variant="primary">Go somewhere</Button>
+            <Button variant="primary" class= "sbutton" >Go somewhere</Button>
 
             </Link>
         </Card>
