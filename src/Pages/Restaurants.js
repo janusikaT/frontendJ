@@ -20,7 +20,7 @@ export default class Restaurants extends React.Component {
             this.setState({ restaurants });
           })
       }
-    outCards(){
+    outCards(props){
         return this.state.restaurants.map(restaurant => 
             <Card key={restaurant._id} shadow={4} style={{ width: '300px',margin: "auto" }}>
             <Card.Title style={{height: '250px', background: restaurant.name }}>{restaurant.name}</Card.Title>
