@@ -1,13 +1,15 @@
 
 
-  
-import React, {useState} from 'react';
+import { Link, Redirect,useHistory } from 'react-router-dom'
+import React, {useState,Redi} from 'react';
 import axios from 'axios';
 import './Login.css';
 
 import { withRouter } from "react-router-dom";
 
 function LoginForm(props) {
+    let history = useHistory()
+
     const [state , setState] = useState({
         email : "",
         password : "",
@@ -34,7 +36,7 @@ function LoginForm(props) {
                         ...prevState,
                         'successMessage' : 'Login successful. Redirecting to home page..'
                     }))
-                    redirectToHome();
+                    handleSubmit();
                     props.showError(null)
                 }
                 else if(response.data.code === 204){
@@ -48,9 +50,8 @@ function LoginForm(props) {
                 console.log(error);
             });
     }
-    const redirectToHome = () => {
-        props.updateTitle('Restaurants')
-        props.history.push('/restaurants');
+     const handleSubmit = ()=>{
+        history.push("/restaurants")
     }
     const redirectToRegister = () => {
         props.history.push('/register'); 

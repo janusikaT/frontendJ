@@ -18,6 +18,7 @@ import PrivateRoute from "./Functions/PrivateRoute";
 import Login from "./Pages/Login";
 import { getToken, removeUserSession, setUserSession } from './Functions/Common';
 import Signup from './Pages/Signup';
+import About from './components/About'
 
 
 
@@ -70,10 +71,11 @@ function App() {
     <div style={{"padding-top": "80px"}}>
     <Switch>
     <Route exact path="/" component={Home}  />
-      <PrivateRoute exact path="/restaurants" component={Restaurants} exact />
+      <Route exact path="/restaurants" component={Restaurants} exact />
       <Route exact path="/restaurant/:id" component={SingleRestaurant} exact />
       <Route exact path="/login" component={Login} exact />
       <Route exact path="/signup" component={Signup} exact />
+      {/* <Route exact path="/aboutus" component={About} exact /> */}
     </Switch>
     </div>
     </Router>
