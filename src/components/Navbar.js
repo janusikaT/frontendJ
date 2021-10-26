@@ -1,5 +1,10 @@
 import React from "react";
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 const Navbar = () => {
   return (
     <header>
@@ -7,12 +12,14 @@ const Navbar = () => {
     <a href="#" class="logo"><i class="fas fa-utensils"></i>YarlBite</a>
 
     <nav class="navbar">
+
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#prices">menu</a>
-        <a href="#review">Restaurant</a>
+        <Link to="/restaurants">Restaurant</Link>
         <a href="#order">ContactUs</a>
         <a href="login.html">login</a>
+
     </nav>
 
     <div class="icons">
