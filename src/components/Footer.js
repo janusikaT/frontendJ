@@ -7,15 +7,6 @@ const Footer = () => {
     <div class="box-container">
 
         <div class="box">
-            <h3>locations</h3>
-            <a href="#">india</a>
-            <a href="#">japan</a>
-            <a href="#">russia</a>
-            <a href="#">USA</a>
-            <a href="#">france</a>
-        </div>
-
-        <div class="box">
             <h3>quick links</h3>
             <a href="#">home</a>
             <a href="#">dishes</a>
@@ -27,11 +18,12 @@ const Footer = () => {
 
         <div class="box">
             <h3>contact info</h3>
-            <a href="#">+123-456-7890</a>
-            <a href="#">+111-222-3333</a>
-            <a href="#">shaikhanas@gmail.com</a>
-            <a href="#">anasbhai@gmail.com</a>
-            <a href="#">mumbai, india - 400104</a>
+            <br>0770123456</br>
+            <b>0761234567</b>
+            <a href="#">yarlbite.info@gmail.com</a>
+            <br>Jaffna,</br>
+            <br>Northern Province,</br>
+            <br>Sri Lanka</br>
         </div>
 
         <div class="box">
@@ -44,7 +36,7 @@ const Footer = () => {
 
     </div>
 
-    <div class="credit"> copyright @ 2021 by <span>mr. web designer</span> </div>
+    <div class="credit"> copyright @ 2021 by <span>Yarl Bite</span> </div>
 
 </section>
 

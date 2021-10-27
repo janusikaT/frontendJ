@@ -5,6 +5,7 @@ import React, {useState,Redi} from 'react';
 import axios from 'axios';
 import './Login.css';
 
+
 import { withRouter } from "react-router-dom";
 
 function LoginForm(props) {
@@ -58,22 +59,26 @@ function LoginForm(props) {
         props.updateTitle('Register');
     }
     return(
-        <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
-            <form>
+        <div class= 'container'>
+
+            <div id='loginheading'> LOG IN</div>
+            <form class ='loginpg'>
+                
+                
                 <div className="form-group text-left">
-                <label htmlFor="exampleInputEmail1">PhoneNumber</label>
+                <label htmlFor="exampleInputEmail1" class='lg'>Phonenumber</label>
                 <input type="number" 
                        className="form-control" 
                        id="phonenumber" 
                        aria-describedby="emailHelp" 
-                       placeholder="Enter phonenumber" 
+                       placeholder="Enter Phonenumber" 
                        value={state.phonenumber}
                        onChange={handleChange}
                 />
                 
                 </div>
                 <div className="form-group text-left">
-                <label htmlFor="exampleInputPassword1">Password</label>
+                <label htmlFor="exampleInputPassword1" class='lg'>Password</label>
                 <input type="password" 
                        className="form-control" 
                        id="password" 
@@ -86,7 +91,7 @@ function LoginForm(props) {
                 </div>
                 <button 
                     type="submit" 
-                    className="btn btn-primary"
+                    id='lbutton'
                     onClick={handleSubmitClick}
                 >Submit</button>
             </form>

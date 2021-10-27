@@ -65,10 +65,12 @@ function Signup(props) {
      
     }
     return(
-        <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
-            <form>
+        <div class='container'>
+       
+            <div id='signupheading'>SIGN UP</div>
+            <form class='signuppg'>
             <div className="form-group text-left">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name" class='sg'>Name</label>
                 <input type="text" 
                        className="form-control" 
                        id="name" 
@@ -80,7 +82,7 @@ function Signup(props) {
                 
                 </div>
                 <div className="form-group text-left">
-                <label htmlFor="address"> Address</label>
+                <label htmlFor="address" class='sg'> Address</label>
                 <input type="text" 
                        className="form-control" 
                        id="address" 
@@ -93,7 +95,7 @@ function Signup(props) {
                 </div>
                 
                 <div className="form-group text-left">
-                <label htmlFor="phonenumber">PhoneNumber</label>
+                <label htmlFor="phonenumber" class='sg'>PhoneNumber</label>
                 <input type="number" 
                        className="form-control" 
                        id="phonenumber" 
@@ -105,7 +107,7 @@ function Signup(props) {
                 
                 </div>
                 <div className="form-group text-left">
-                <label htmlFor="exampleInputEmail1">Email address</label>
+                <label htmlFor="exampleInputEmail1" class='sg'>Email address</label>
                 <input type="email" 
                        className="form-control" 
                        id="email" 
@@ -117,7 +119,7 @@ function Signup(props) {
                 
                 </div>
                 <div className="form-group text-left">
-                    <label htmlFor="exampleInputPassword1">Password</label>
+                    <label htmlFor="exampleInputPassword1" class='sg'>Password</label>
                     <input type="password" 
                         className="form-control" 
                         id="password" 
@@ -129,7 +131,7 @@ function Signup(props) {
                 
                 <button 
                     type="submit" 
-                    className="btn btn-primary"
+                    id='sgbutton'
                     onClick={handleSubmitClick}
                 >
                     Register
@@ -144,6 +146,7 @@ function Signup(props) {
             </div>
             
         </div>
+    
     )
 }
 

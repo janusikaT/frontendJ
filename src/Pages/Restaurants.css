@@ -1,0 +1,27 @@
+#sbutton {
+  border: none;
+  border-radius: 20px;
+  outline: 0;
+  padding: 10px;
+  color: white;
+  background-color: rgb(2, 66, 68);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.pnoandaddress {
+    color: grey;
+    font-size: 15px;
+  }
+.resheading{
+  color:rgb(6, 128, 6);
+  font-size: 20px;
+  text-align: center;
+}
+
