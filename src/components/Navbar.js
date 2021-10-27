@@ -14,11 +14,12 @@ const Navbar = () => {
     <nav class="navbar">
 
         <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
+        <Link to="/aboutus">AboutUs</Link>
         <a href="#prices">menu</a>
         <Link to="/restaurants">Restaurant</Link>
         <a href="#order">ContactUs</a>
-        <a href="login.html">login</a>
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Signup</Link>
 
     </nav>
 

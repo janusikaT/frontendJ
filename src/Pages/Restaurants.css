@@ -1,11 +1,10 @@
-
-
-.sbutton {
+#sbutton {
   border: none;
+  border-radius: 20px;
   outline: 0;
-  padding: 12px;
+  padding: 10px;
   color: white;
-  background-color: #000;
+  background-color: rgb(2, 66, 68);
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -16,7 +15,13 @@
   opacity: 0.7;
 }
 
-.price {
+.pnoandaddress {
     color: grey;
-    font-size: 22px;
+    font-size: 15px;
   }
+.resheading{
+  color:rgb(6, 128, 6);
+  font-size: 20px;
+  text-align: center;
+}
+
