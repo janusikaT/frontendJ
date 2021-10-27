@@ -19,8 +19,8 @@ import Login from "./Pages/Login";
 import { getToken, removeUserSession, setUserSession } from './Functions/Common';
 import Signup from './Pages/Signup';
 import About from './components/About'
-
-
+import Food from './Pages/Food';
+import AddFood from './Pages/FoodAdd';
 
 
 
@@ -48,7 +48,7 @@ function App() {
   // if (authLoading && getToken()) {
   //   return <div className="content">Checking Authentication...</div>
   // }
-
+    
 
 
 
@@ -75,6 +75,8 @@ function App() {
       <Route exact path="/restaurant/:id" component={SingleRestaurant} exact />
       <Route exact path="/login" component={Login} exact />
       <Route exact path="/signup" component={Signup} exact />
+      <Route exact path="/food" component={Food} exact />
+      {/* <Route exact path="/foods" component={AddFood} exact /> */}
       {/* <Route exact path="/aboutus" component={About} exact /> */}
     </Switch>
     </div>
