@@ -8,26 +8,34 @@ import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 export default class SingleRestaurant extends React.Component {
     
     state = {
-        restaurant: {}
-       
+        restaurant: {},
+       foods:[]
       }
 
-      componentDidMount() {
+      async componentDidMount() {
           const id  =  this.props.match.params.id;
           console.log(id);
-        axios.get(`http://localhost:4000/restaurants/${id}`)
+        await axios.get(`http://localhost:4000/restaurants/${id}`)
           .then(res => {
      
             const restaurant = res.data.output;
-            this.setState({ restaurant });
+            this.setState({restaurant: restaurant,
+              foods:restaurant.food
+            });
             // console.log(this.state.restaurant.food[0].food._id);
             
             
           })
+          console.log(this.state.restaurant);
+          console.log(this.state.foods);
           
       }
       foodsLoop(){
-        return this.state.restaurant.food.map(foo => 
+        return this.state.foods.map(foo => 
+          // <div key={foo.food._id}> {foo.food.name}
+          // {foo.food.price}
+          // {foo.food.type}
+          // </div>
             <Card key={foo.food._id} shadow={4} style={{ width: '300px',margin: "auto" }}>
             <Card.Title style={{height: '250px',  }}>{foo.food.name}</Card.Title>
        
@@ -47,7 +55,7 @@ export default class SingleRestaurant extends React.Component {
             <Card.Text>
                 {this.state.restaurant.address}
                 {this.state.restaurant.phonenumber}
-               
+                {this.foodsLoop()}
             </Card.Text>
            
 
