@@ -21,6 +21,7 @@ import Signup from './Pages/Signup';
 import About from './components/About'
 import Food from './Pages/Food';
 import AddFood from './Pages/FoodAdd';
+import AddToCart from './Pages/AddToCart';
 
 
 
@@ -76,6 +77,7 @@ function App() {
       <Route exact path="/login" component={Login} exact />
       <Route exact path="/signup" component={Signup} exact />
       <Route exact path="/food" component={Food} exact />
+      <Route exact path="/order" component={AddToCart} exact />
       {/* <Route exact path="/foods" component={AddFood} exact /> */}
       {/* <Route exact path="/aboutus" component={About} exact /> */}
     </Switch>

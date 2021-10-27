@@ -1,0 +1,23 @@
+import React from "react";
+import { Form, FormLabel } from "react-bootstrap";
+
+
+
+const AddRestaurants = ()=> {
+    return(
+        <Form>
+            <FormLabel>Name</FormLabel>
+            <input type='text' value='name'/>
+            <FormLabel>Address</FormLabel>
+            <input type='text' value='name'/>
+            <FormLabel>Name</FormLabel>
+            <input type='text' value='name'/>
+            <FormLabel>Name</FormLabel>
+            <input type='text' value='name'/>
+            <FormLabel>Name</FormLabel>
+            <input type='text' value='name'/>
+        </Form>
+    )
+}
+
+export default AddRestaurants
