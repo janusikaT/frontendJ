@@ -1,26 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+
 import "./App.css";
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
 import Restaurants from "./Pages/Restaurants";
 import Navbar from "./components/Navbar";
 import Home from "./Pages/HomePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import SingleRestaurant from "./Pages/SingleRestaurant";
-import PublicRoute from "./Functions/PublicRoute";
-import PrivateRoute from "./Functions/PrivateRoute";
+import SingleRestaurant from "./Pages/SingleRestaurant"
 import Login from "./Pages/Login";
-import { getToken, removeUserSession, setUserSession } from './Functions/Common';
 import Signup from './Pages/Signup';
-import About from './components/About'
 import Food from './Pages/Food';
-import AddFood from './Pages/FoodAdd';
+
 import AddToCart from './Pages/AddToCart';
 import Restaurantadd from './Pages/Restaurantaddpage';
 
