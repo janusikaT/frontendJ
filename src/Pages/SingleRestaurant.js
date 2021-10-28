@@ -39,8 +39,8 @@ export default class SingleRestaurant extends React.Component {
           // {foo.food.price}
           // {foo.food.type}
           // </div>
-            <Card key={foo.food._id} shadow={4} style={{ width: '300px',margin: "auto" }}>
-            <Card.Title style={{height: '250px',  }}>{foo.food.name}</Card.Title>
+            <Card key={foo.food._id} shadow={4} style={{ width: '300px',margin: "auto" ,borderRadius: '25px',marginTop:'50px'  }}>
+            <Card.Title style={{height: '75px', background: foo.food.name, paddingTop:'30px' }}>{foo.food.name}</Card.Title>
             <Card.Text class='pnoandaddress'>
                 {foo.food.price}
             </Card.Text>
@@ -54,29 +54,29 @@ export default class SingleRestaurant extends React.Component {
       }
           
       render() {
-        return (
+         return (
             
-            <div class="box-container">
+           <div class="box-container">
          
-                <h1 style={{"text-align":"center"}} >RESTAURANT</h1>
-                <Card  shadow={4} style={{ width: '300px',margin: "auto",borderRadius: '20px'}}>
-            <Card.Title style={{height: '250px'}} class='resheading'>{this.state.restaurant.name}</Card.Title>
-            <Card.Text class='pnoandaddress'>
-                {this.state.restaurant.address}
-            </Card.Text>
-            <Card.Text class='pnoandaddress'>
-                {this.state.restaurant.phonenumber}
-                {this.foodsLoop()}
-            </Card.Text>
+                 <h1 style={{"text-align":"center"}} >RESTAURANT</h1>
+                 <Card  shadow={4} style={{ width: '300px',margin: "auto",borderRadius: '20px'}}>
+             <Card.Title style={{height: '250px'}} class='resheading'>{this.state.restaurant.name}</Card.Title>
+             <Card.Text class='pnoandaddress'>
+                 {this.state.restaurant.address}
+             </Card.Text>
+             <Card.Text class='pnoandaddress'>
+                 {this.state.restaurant.phonenumber}
+                 {this.foodsLoop()}
+             </Card.Text>
            
 
-        </Card>
+         </Card>
        
 
-            </div>
+             </div>
            
           
-        )
+         )
       }
 
 }
