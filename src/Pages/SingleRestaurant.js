@@ -62,20 +62,20 @@ export default class SingleRestaurant extends React.Component {
           // {foo.food.price}
           // {foo.food.type}
           // </div>
-          <div className="coll-11 col-md-6 col-lg-3 mx-0 mb-4">
+          <div >
               
-              <Card style={{ width: '50rem' }}  >
-  <Card.Img/>
-  <Card.Body style={{textAlign:'center'}}>
-    <Card.Title>{foo.food.name}</Card.Title>
-    <Card.Text>
-     {foo.food.price}
-    </Card.Text>
-    <Card.Text>
-     {foo.food.type}
-    </Card.Text>
-    <Button variant="primary" className="btn btn-success">Add To Cart</Button>
-  </Card.Body>
+              <Card  shadow={5} style={{ width: '300px',margin: "auto", borderRadius: '25px',marginTop:'50px' }}  >
+                 <Card.Img/>
+                        <Card.Body style={{textAlign:'center'}}>
+                        <Card.Title style={{height: '75px', background: foo.food.name, paddingTop:'30px' }} class='resheading'>{foo.food.name}</Card.Title>
+                               <Card.Text>
+                                   {foo.food.price}
+                               </Card.Text>
+                               <Card.Text>
+                                   {foo.food.type}
+                               </Card.Text>
+                    <Button variant="primary" className="btn btn-success">Add To Cart</Button>
+              </Card.Body>
 
     
             {/* <div class="container">
@@ -118,8 +118,12 @@ export default class SingleRestaurant extends React.Component {
       render() {
         return <div class="box-container">
           <h1> {this.state.restaurant.name} </h1>
-        {this.foodsLoop()}  
+       
+        <Row xs={2} md={4} className="g-3">
+            {this.foodsLoop()}  
+        </Row>
      </div>
+            
             
      
          
