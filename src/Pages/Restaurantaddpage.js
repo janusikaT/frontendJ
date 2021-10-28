@@ -29,7 +29,7 @@ function Restaurantadd(props) {
                 "email":state.food,
                 "password":state.password,
             }
-            axios.post(`http://localhost:4000/restaurants`, payload)
+            axios.post('http://localhost:4000/restaurants', payload)
                 .then(function (response) {
                     if(response.status === 200){
                         setState(prevState => ({

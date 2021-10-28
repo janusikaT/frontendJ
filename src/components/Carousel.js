@@ -1,8 +1,8 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
-import image1 from '../Images/img8.png'
-import image2 from '../Images/img9.png'
-import image3 from '../Images/img7.jpg'
+import image1 from '../Images/home-img-1.png'
+import image2 from '../Images/home-img-2.png'
+import image3 from '../Images/home-img-3.png'
 
 const CarouselCard = () => {
     return <div>
@@ -12,6 +12,7 @@ const CarouselCard = () => {
         className="d-block"
         src={image1}
         alt="first slide"
+        align='center'
       />
       <Carousel.Caption>
         <h3>First slide label</h3>
