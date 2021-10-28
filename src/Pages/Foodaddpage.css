@@ -1,11 +1,14 @@
-.login-card {
+.successMessage {
+    color: green;
+    font-weight: bold;
+}
+
+.signup-card {
     min-height: 60vh;
 }
 
-.registerMessage {
-    margin-top: 10vh;
-}
-.loginpg{
+
+.faddpg{
     min-height: 50vh;
    
     align-items: center;
@@ -45,15 +48,15 @@ input {
       font-size: 30px;
   }
 
-  #loginheading{
+  #faddheading{
       font-size:40px;
       text-align: center;
   }
-  .lg{
+  .fa{
       font-size: 20px;
   }
 
-  #lbutton {
+  #fabutton {
     border: none;
     border-radius: 20px;
     outline: 0;

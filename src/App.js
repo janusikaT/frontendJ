@@ -19,6 +19,7 @@ import Food from './Pages/Food';
 
 import AddToCart from './Pages/AddToCart';
 import Restaurantadd from './Pages/Restaurantaddpage';
+import Foodadd from './Pages/Foodaddpage';
 
 
 
@@ -76,6 +77,7 @@ function App() {
       <Route exact path="/food" component={Food} exact />
       <Route exact path="/order" component={AddToCart} exact />
       <Route exact path="/restaurantadd" component={Restaurantadd} exact />
+      <Route exact path="/foodadd" component={Foodadd} exact />
       {/* <Route exact path="/foods" component={AddFood} exact /> */}
       {/* <Route exact path="/aboutus" component={About} exact /> */}
     </Switch>

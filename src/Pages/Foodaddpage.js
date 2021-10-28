@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import './Restaurantaddpage.css';
+import './Foodaddpage.css';
 
 
 
-function Restaurantadd(props) {
+function Foodadd(props) {
     const [state , setState] = useState({
-        food:"",
-        password : "",
+        type:"",
         name:"",
-        address:"",
-        phonenumber:""
+        price:"",
+        image:""
         
     })
     const handleChange = (e) => {
@@ -24,17 +23,16 @@ function Restaurantadd(props) {
 
             const payload={
                 "name":state.name,
-                "address":state.address,
-                "phonenumber":state.phonenumber,
-                "email":state.food,
-                "password":state.password,
+                "type":state.type,
+                "price":state.price,
+                "image":state.image,
             }
-            axios.post('http://localhost:4000/restaurants', payload)
+            axios.post('http://localhost:4000/foods', payload)
                 .then(function (response) {
                     if(response.status === 200){
                         setState(prevState => ({
                             ...prevState,
-                            'successMessage' : 'Restaurant registration successful. Redirecting to home page..'
+                            'successMessage' : 'Food adding successful. Redirecting to home page..'
                         }))
                         localStorage.setItem(`yarlbite`,response.data.token);
                         redirectToHome();
@@ -62,59 +60,48 @@ function Restaurantadd(props) {
     return(
         <div class='container'>
        
-            <div id='resaddheading'>RESTAURANT SIGN UP</div>
-            <form class='resaddpg'>
+            <div id='faddheading'>FOOD ADD</div>
+            <form class='faddpg'>
             <div className="form-group text-left">
-                <label htmlFor="name" class='ra'>Name</label>
+                <label htmlFor="name" class='fa'>Name</label>
                 <input type="text" 
                        className="form-control" 
                        id="name" 
                        
-                       placeholder="Enter Restaurant Name" 
+                       placeholder="Enter Food Name" 
                        value={state.name}
                        onChange={handleChange}
                 />
                 
                 </div>
                 <div className="form-group text-left">
-                <label htmlFor="address" class='ra'> Address</label>
+                <label htmlFor="type" class='fa'> Food Type</label>
                 <input type="text" 
                        className="form-control" 
-                       id="address" 
+                       id="type" 
                     
-                       placeholder="Enter Restaurant Address" 
-                       value={state.address}
+                       placeholder="Enter Food Type" 
+                       value={state.type}
                        onChange={handleChange}
                 />
                 
                 </div>
                 
                 <div className="form-group text-left">
-                <label htmlFor="phonenumber" class='ra'>PhoneNumber</label>
+                <label htmlFor="price" class='fa'>Price</label>
                 <input type="number" 
                        className="form-control" 
-                       id="phonenumber" 
+                       id="price" 
                      
-                       placeholder="Enter PhoneNumber" 
-                       value={state.phonenumber}
+                       placeholder="Enter Price" 
+                       value={state.price}
                        onChange={handleChange}
                 />
                 
-                </div>
-                <div className="form-group text-left">
-                <label htmlFor="exampleInputEmail1" class='ra'>Food</label>
-                <input type="text" 
-                       className="form-control" 
-                       id="food" 
-                     
-                       placeholder="Enter Food Details" 
-                       value={state.food}
-                       onChange={handleChange}
-                />
                 
                 </div>
                 <div className="form-group text-left">
-                    <label htmlFor="exampleInputPassword1" class='ra'>Password</label>
+                    <label htmlFor="exampleInputPassword1" class='fa'>Image</label>
                     <input type="password" 
                         className="form-control" 
                         id="password" 
@@ -126,10 +113,10 @@ function Restaurantadd(props) {
                 
                 <button 
                     type="submit" 
-                    id='rabutton'
+                    id='fabutton'
                     onClick={handleSubmitClick}
                 >
-                    Register
+                    Food Register
                 </button>
             </form>
             <div className="alert alert-success mt-2" style={{display: state.successMessage ? 'block' : 'none' }} role="alert">
@@ -142,4 +129,4 @@ function Restaurantadd(props) {
     )
 }
 
-export default(Restaurantadd);
+export default(Foodadd);
