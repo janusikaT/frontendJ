@@ -37,7 +37,7 @@ export default class Restaurants extends React.Component {
                  {restaurant.phonenumber}
             </Card.Text>
             <Link to={`/restaurant/${restaurant._id}`}>
-            <Button  id ="sbutton" style={{marginBottom:'5px'}} >Explore</Button>
+            <Button  id ="sbutton" style={{marginBottom:'5px'}}>Explore</Button>
 
             </Link>
             </Card>

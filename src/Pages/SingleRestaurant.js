@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from "react";
-
+import { useCart } from "react-use-cart";
 import axios from 'axios';
 import { Card, Button, Row} from "react-bootstrap";
 import { useParams } from "react-router-dom";
@@ -9,6 +9,8 @@ import './Restaurants.css'
 import './SingleRestaurant.css'
 
 export default class SingleRestaurant extends React.Component {
+
+    
     constructor(props){
       super(props);
     this.state = {
@@ -43,6 +45,7 @@ export default class SingleRestaurant extends React.Component {
           console.log(this.state.foods);
           
       }
+      
    increaseQuantity(){
     this.setState({
       quantity: this.state.quantity + 1
@@ -59,11 +62,23 @@ export default class SingleRestaurant extends React.Component {
           // {foo.food.price}
           // {foo.food.type}
           // </div>
-          <div>
-              <Card key={foo.food._id} shadow={4} style={{ width: '500px',margin: "auto" }}>
-            <Card.Title style={{height: '250px',  }}>{foo.food.name}</Card.Title>
-            <Card.Text>
-            <div class="container">
+          <div className="coll-11 col-md-6 col-lg-3 mx-0 mb-4">
+              
+              <Card style={{ width: '50rem' }}  >
+  <Card.Img/>
+  <Card.Body style={{textAlign:'center'}}>
+    <Card.Title>{foo.food.name}</Card.Title>
+    <Card.Text>
+     {foo.food.price}
+    </Card.Text>
+    <Card.Text>
+     {foo.food.type}
+    </Card.Text>
+    <Button variant="primary" className="btn btn-success">Add To Cart</Button>
+  </Card.Body>
+
+    
+            {/* <div class="container">
 	<div class="row">
 		<h2>Simple Quantity increment buttons with Javascript </h2>
         
@@ -87,8 +102,8 @@ export default class SingleRestaurant extends React.Component {
 	</div>
 
 </div>
-<div>{this.state.quantity}</div>
-            </Card.Text>
+<div>{this.state.quantity}</div> */}
+            
             </Card>
           </div>
 
@@ -101,29 +116,32 @@ export default class SingleRestaurant extends React.Component {
       }
           
       render() {
-        return (
+        return <div class="box-container">
+          <h1> {this.state.restaurant.name} </h1>
+        {this.foodsLoop()}  
+     </div>
             
-            <div class="box-container">
+     
          
-                <h1 style={{"text-align":"center"}} >RESTAURANT</h1>
+                {/* <h1 style={{"text-align":"center"}} >RESTAURANT</h1>
                 <Card  shadow={4} style={{ width: '300px',margin: "auto",borderRadius: '20px'}}>
             <Card.Title style={{height: '250px'}} class='resheading'>{this.state.restaurant.name}</Card.Title>
             <Card.Text class='pnoandaddress'>
                 {this.state.restaurant.address}
             </Card.Text>
             <Card.Text class='pnoandaddress'>
-                {this.state.restaurant.phonenumber}
-                {this.foodsLoop()}
-            </Card.Text>
+                {this.state.restaurant.phonenumber} */}
+                
+            {/* </Card.Text>
            
 
         </Card>
        
 
-            </div>
+            </div> */}
            
           
-        )
+        
       }
 
 }
