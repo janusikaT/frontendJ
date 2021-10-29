@@ -1,19 +1,13 @@
 import React from "react";
 
+
 const About = () => {
   return (
     <section class="footer">
 
     <div class="box-container">
 
-        <div class="box">
-            <h3>locations</h3>
-            <a href="#">india</a>
-            <a href="#">japan</a>
-            <a href="#">russia</a>
-            <a href="#">USA</a>
-            <a href="#">france</a>
-        </div>
+        
 
         <div class="box">
             <h3>quick links</h3>
@@ -44,7 +38,7 @@ const About = () => {
 
     </div>
 
-    <div class="credit"> copyright @ 2021 by <span>mr. web designer</span> </div>
+    <div class="credit"> copyright @ 2021 by <span>Yarl Bite</span> </div>
 
 </section>
 

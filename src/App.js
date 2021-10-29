@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Restaurants from "./Pages/Restaurants";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./Pages/HomePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SingleRestaurant from "./Pages/SingleRestaurant"
@@ -67,6 +68,7 @@ function App() {
     <Router>
     <Navbar />
     
+    
     <div style={{"padding-top": "80px"}}>
     <Switch>
     <Route exact path="/" component={Home}  />
@@ -82,6 +84,7 @@ function App() {
       {/* <Route exact path="/aboutus" component={About} exact /> */}
     </Switch>
     </div>
+    <Footer/>
     </Router>
   </div>
   );

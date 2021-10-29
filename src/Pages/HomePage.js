@@ -1,17 +1,59 @@
-import React from 'react';
-import CarouselCard from '../components/Carousel';
-import Footer from '../components/Footer.js';
-import Restaurants from './Restaurants'
-import About from '../components/About';
+// import React from 'react';
+// import ControlledCarousel from '../components/c';
+// import Restaurants from './Restaurants'
 
-<link href='../components/Footer.js'></link>
 
-const Home = ()=> {
-    return <div>
-       <CarouselCard/>
-       <Restaurants />
-       <About/>
-    </div>
+
+
+// const Home = ()=> {
+//     return <div>
+//        <ControlledCarousel/>
+//        <Restaurants />
+    
+//     </div>
+// }
+
+// export default Home
+
+import React from "react";
+import bgImage from "../Images/bg2.jpg";
+//import './Homepage.css'
+
+function Home() {
+  return (
+      <div
+        class="bg_image"
+        style={{
+          backgroundImage: 'url('+bgImage+')',
+          backgroundSize: "cover",
+          height: "100vh",
+          color: "#f5f5f5"
+        }}
+      >
+        <h1 class="text" >Welcome to the YARL BITE page.</h1>
+      </div>
+  );
 }
 
-export default Home
+export default Home;
+
+
+// import React from 'react';
+// //import './App.css';
+// import desktopbgImage from "../Images/bg2.jpg";
+// import mobilebgImage from "../Images/bg2.jpg";
+
+// const Home = () => {
+//     const imageUrl = window.innerWidth >= 650 ? desktopbgImage : mobilebgImage;
+
+//     return (
+//         <div className="Home" style={{backgroundImage: `url(${imageUrl})` }}>
+//             <div className="App-content">
+//                 <h1>Pineapples</h1>
+//                 <p>They are good</p>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default Home;

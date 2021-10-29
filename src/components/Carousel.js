@@ -12,7 +12,6 @@ const CarouselCard = () => {
         className="d-block"
         src={image1}
         alt="first slide"
-        align='center'
       />
       <Carousel.Caption>
         <h3>First slide label</h3>
@@ -25,6 +24,12 @@ const CarouselCard = () => {
         src={image2}
         alt="Second slide"
       />
+       <div class="content">
+                    <span>our special dish</span>
+                    <h3>fried chicken</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit natus dolor cumque?</p>
+                    <a href="#" class="btn">order now</a>
+                </div>
   
       <Carousel.Caption>
         <h3>Second slide label</h3>

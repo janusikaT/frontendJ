@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, FormLabel } from "react-bootstrap";
-
+import Footer from '../components/Footer'
 
 
 const AddRestaurants = ()=> {
@@ -19,5 +19,6 @@ const AddRestaurants = ()=> {
         </Form>
     )
 }
+<Footer/>
 
 export default AddRestaurants

@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Card, Button, Row} from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
+import image3 from '../Images/img6.jpg'
 
 import './Restaurants.css'
 import './SingleRestaurant.css'
@@ -65,13 +66,13 @@ export default class SingleRestaurant extends React.Component {
           <div >
               
               <Card  shadow={5} style={{ width: '300px',margin: "auto", borderRadius: '25px',marginTop:'50px' }}  >
-                 <Card.Img/>
+              <img src={image3}/>
                         <Card.Body style={{textAlign:'center'}}>
                         <Card.Title style={{height: '75px', background: foo.food.name, paddingTop:'30px' }} class='resheading'>{foo.food.name}</Card.Title>
-                               <Card.Text>
+                               <Card.Text class="pnoandaddress">
                                    {foo.food.price}
                                </Card.Text>
-                               <Card.Text>
+                               <Card.Text class="pnoandaddress">
                                    {foo.food.type}
                                </Card.Text>
                     <Button variant="primary" className="btn btn-success">Add To Cart</Button>
