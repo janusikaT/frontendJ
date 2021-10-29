@@ -17,9 +17,13 @@
 
 import React from "react";
 import bgImage from "../Images/bg2.jpg";
-//import './Homepage.css'
+import './Homepage.css'
+import {Button} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Home() {
+  
+
   return (
       <div
         class="bg_image"
@@ -31,6 +35,17 @@ function Home() {
         }}
       >
         <h1 class="text" >Welcome to the YARL BITE page.</h1>
+
+        <Link to={`/restaurants`}>
+            <Button  id ="hbutton" style={{marginBottom:'5px'}}>Explore The Restaurants</Button>
+
+        </Link>
+      
+
+
+  
+   
+
       </div>
   );
 }

@@ -1,8 +1,22 @@
 .text {
     color: black;
     font-size: 42;
-    line-height: 84;
+    line-height: 20;
     font-weight: bold;
     text-align: center;
-    background-color: #000000c0;
 }
+#hbutton {
+    border: none;
+    border-radius: 20px;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: rgb(2, 66, 68);
+    text-align: center;
+    cursor: pointer;
+    width: 25%;
+    font-size: 18px;
+    margin-left: 38%;
+    margin-top: -400px;
+  }
+  
