@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Card, Button, Row} from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
-import image3 from '../Images/img6.jpg'
+import image3 from '../Images/img8.png'
 
 import './Restaurants.css'
 import './SingleRestaurant.css'
