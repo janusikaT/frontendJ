@@ -34,7 +34,7 @@ function Home() {
           color: "#f5f5f5"
         }}
       >
-        <h1 class="text" >Welcome to the YARL BITE page.</h1>
+        <h1 class="text" >Welcome to the YARL BITE .</h1>
 
         <Link to={`/restaurants`}>
             <Button  id ="hbutton" style={{marginBottom:'5px'}}>Explore The Restaurants</Button>

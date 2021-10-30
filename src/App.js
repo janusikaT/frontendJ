@@ -21,7 +21,8 @@ import Food from './Pages/Food';
 import AddToCart from './Pages/AddToCart';
 import Restaurantadd from './Pages/Restaurantaddpage';
 import Foodadd from './Pages/Foodaddpage';
-//import OrderCard from './Pages/Ordercard';
+import AdminRestView from './Pages/adminRestView';
+import Order from './Pages/Order'
 
 
 
@@ -78,9 +79,11 @@ function App() {
       <Route exact path="/login" component={Login} exact />
       <Route exact path="/signup" component={Signup} exact />
       <Route exact path="/food" component={Food} exact />
-      <Route exact path="/order" component={AddToCart} exact />
+     
       <Route exact path="/restaurantadd" component={Restaurantadd} exact />
-      <Route exact path="/foodadd" component={Foodadd} exact />
+      <Route exact path="/foodadd/:id" component={Foodadd} exact />
+      <Route exact path="/admin-rest" component={AdminRestView} exact />
+      <Route exact path="/order" component={Order} exact />
       {/* <Route exact path="/foods" component={AddFood} exact /> */}
       {/* <Route exact path="/aboutus" component={About} exact /> */}
     </Switch>
