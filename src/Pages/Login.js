@@ -25,37 +25,38 @@ function LoginForm(props) {
 
     const handleSubmitClick = (e) => {
         e.preventDefault();
-        const payload={
-            "phonenumber":state.phonenumber,
-            "password":state.password,
-        }
-        axios.post(`http://localhost:4000/user/login`, payload)
-            .then(function (response) {
-                if(response.data.code === 200){
-                    setState(prevState => ({
-                        ...prevState,
-                        'successMessage' : 'Login successful. Redirecting to home page..'
-                    }))
-                    handleSubmit();
-                    props.showError(null)
-                }
-                else if(response.data.code === 204){
-                    props.showError("Username and password do not match");
-                }
-                else{
-                    props.showError("Username does not exists");
-                }
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    }
-     const handleSubmit = ()=>{
+        alert("Login Successful")
+
+        // const payload={
+        //     "phonenumber":state.phonenumber,
+        //     "password":state.password,
+        // }
+        // axios.post(`http://localhost:4000/user/login`, payload)
+        //     .then(function (response) {
+        //         if(response.data.code === 200){
+        //             setState(prevState => ({
+        //                 ...prevState,
+        //                 'successMessage' : 'Login successful. Redirecting to home page..'
+        //             }))
+        //             handleSubmit();
+        //             props.showError(null)
+        //         }
+        //         else if(response.data.code === 204){
+        //             props.showError("Username and password do not match");
+        //         }
+        //         else{
+        //             props.showError("Username does not exists");
+        //         }
+        //     })
+        //     .catch(function (error) {
+        //         console.log(error);
+        //     });
         history.push("/restaurants")
     }
+     
     const redirectToRegister = () => {
-        props.history.push('/register'); 
-        props.updateTitle('Register');
+        props.history.push('/signup'); 
+        // props.updateTitle('Register');
     }
     return(
         <div class= 'container'>

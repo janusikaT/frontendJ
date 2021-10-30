@@ -14,19 +14,27 @@ this.state = {
  
 }
     }
-    
-    
-      async componentDidMount() {
-        await axios.get(`http://localhost:4000/order`)
+    async getAllOrders() {
+      await axios.get(`http://localhost:4000/order`)
           .then(res => {
 
             const response  = res.data.orders ;
             this.setState({ orders:response });
             console.log(this.state.orders);
           })
+    }
+    
+       componentDidMount() {
+        this.getAllOrders();
       }
-      foodsLoop() {
-        return 
+      async deleteOrder(id) {
+        await axios.delete(`http://localhost:4000/order/${id}`)
+        .then(res => {
+
+         this.getAllOrders();
+          console.log("deleted");
+
+        })
       }
     outCards(){
   
@@ -35,14 +43,17 @@ this.state = {
             <Card.Title style={{height: '75px',paddingTop:'30px' }} class='resheading'>{order._id}</Card.Title>
            
             
-        <Card.Text class= 'pnoandaddress' > 
-        {order.orderFoods.map(foo => <div>
-              {foo.quantity}  
+        <Card.Text class= 'pnoandaddress'  > 
+        
+         {order.orderFoods.length>0 && order.orderFoods.map(foo => <div>
+              {foo.quantity} 
+              
+              
         </div>)
-    }
+    } 
             </Card.Text>
          
-             <Button style={{marginBottom:'5px'}}>Delete</Button>
+             <Button style={{marginBottom:'5px'}} onClick={() => this.deleteOrder(order._id)}>Delete</Button>
             </Card>
              )
            
